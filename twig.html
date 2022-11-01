@@ -9,6 +9,53 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
+
+    .modal.right .modal-dialog {
+  		position: fixed;
+  		margin: auto;
+  		width: 320px;
+  		height: 100%;
+  		-webkit-transform: translate3d(0%, 0, 0);
+  		    -ms-transform: translate3d(0%, 0, 0);
+  		     -o-transform: translate3d(0%, 0, 0);
+  		        transform: translate3d(0%, 0, 0);
+  	}
+
+  	.modal.right .modal-content {
+  		height: 100%;
+  		overflow-y: auto;
+  	}
+
+  	.modal.right .modal-body {
+  		padding: 15px 15px 80px;
+  	}
+
+  /*Right*/
+  	.modal.right.fade .modal-dialog {
+  		right: -320px;
+  		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+  		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+  		        transition: opacity 0.3s linear, right 0.3s ease-out;
+  	}
+
+  	.modal.right.fade.in .modal-dialog {
+  		right: 0;
+  	}
+
+  /* ----- MODAL STYLE ----- */
+  	.modal-content {
+  		border-radius: 0;
+  		border: none;
+  	}
+
+  	.modal-header {
+  		border-bottom-color: #EEEEEE;
+  		background-color: #FAFAFA;
+  	}
+
+
+
     input {
       border: none;
       background: transparent;
@@ -42,14 +89,38 @@
         <h2><input type="text" placeholder="Enter dates" autocomplete="none"></h2>
       </li>
     </ul>
-    <ul class="nav mt-3 justify-content-end">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    <ul class="nav mt-3 ms-auto">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="modalButton">
       About
       </button>
     </ul>
   </nav>
 
   <div class="container-fluid px-4">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+			Right Sidebar Modal
+		</button>
+    <!-- Modal test-->
+  	<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+
+  				<div class="modal-header">
+  					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
+  				</div>
+
+  				<div class="modal-body">
+  					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+  					</p>
+  				</div>
+
+  			</div><!-- modal-content -->
+  		</div><!-- modal-dialog -->
+  	</div><!-- modal test-->
+
+
+
     <div class="row mt-4">
       <div class="col-lg-2 col-md-4 col-sm-12">
         <h4>Monday</h4>
@@ -404,10 +475,53 @@
           <hr>
           <h4><small>To enhance your productivity, Twig is built around a week calendar view without any hourly scheduling. We’d say it’s the best view to organize your life and work without stress.</small></h4>
           <button type="button" class="btn btn-dark rounded-pill" data-bs-dismiss="modal">Start now! No sign-up required.</button>
-          FAQ
+          <div class="accordion" id="FAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    modalButton = document.getElementById("modalButton");
+    modalButton.click()
+  </script>
 
 </body>
 
