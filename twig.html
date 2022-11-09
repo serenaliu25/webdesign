@@ -34,15 +34,64 @@
 
   <nav class="navbar navbar-expand-sm bg-light px-4">
     <ul class="nav mt-3">
-      <li class="nav-item">
-        <h2><input type="text" class="form-control" placeholder="Enter month" autocomplete="none"></h2>
+      <li class="nav-item p-1">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Enter Month</option>
+          <option value="1">January</option>
+          <option value="2">Febuary</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
       </li>
-      <li class="nav-item">
-        <h2><input type="text" placeholder="Enter dates" autocomplete="none"></h2>
+      <li class="nav-item p-1">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Enter Date</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
       </li>
+    <!-- add functionality to this button and make the color better -->
+    <button class='btn btn-light'> Enter </button>
     </ul>
     <ul class="nav mt-3 ms-auto">
-      <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" id="offcanvasButton">
+      <button type="button" class="bg-dark btn btn-primary border-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" id="offcanvasButton">
         About
       </button>
     </ul>
@@ -342,32 +391,7 @@
     </div> <!-- row 1 -->
 
     <div class="row mt-2">
-      <div class="col-lg-6 col-sm-12">
-        <h4>Someday</h4>
-        <hr class="mt-3 mb-0">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input mt-2">
-          <input type="text" class="form-control border-0">
-        </div>
-        <hr class="my-0">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input mt-2">
-          <input type="text" class="form-control border-0">
-        </div>
-        <hr class="my-0">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input mt-2">
-          <input type="text" class="form-control border-0">
-        </div>
-        <hr class="my-0">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input mt-2">
-          <input type="text" class="form-control border-0">
-        </div>
-        <hr class="mt-0 mb-3">
-      </div>
-
-      <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-12 col-sm-12">
         <h4>Other</h4>
         <hr class="mt-3 mb-0">
         <div class="form-check">
@@ -404,7 +428,6 @@
       <p>Plan for yourself, your family and team.</p>
       <hr>
       <h4><small>To enhance your productivity, Twig is built around a week calendar view without any hourly scheduling. We’d say it’s the best view to organize your life and work without stress.</small></h4>
-      <button type="button" class="btn btn-dark rounded-pill" data-bs-dismiss="offcanvas">Start now! No sign-up required.</button>
       <div id="accordion">
         <div class="card">
           <div class="card-header">
@@ -439,6 +462,8 @@
         </div>
       </div>
       </div> <!--  accordion  -->
+      <br>
+      <button type="button" class="btn btn-dark rounded-pill" data-bs-dismiss="offcanvas"><b>START NOW</b></button>
     </div> <!--  body  -->
   </div> <!--  offcanvas  -->
 
@@ -449,6 +474,7 @@
 
 </body>
 
+<pre>
 Goals/To-do:
 - make month and dates input width responsive to content
 - figure out FAQ dropdowns
@@ -459,5 +485,6 @@ Goals/To-do:
 - align Sunday
 - eliminate space between checkbox and text
 - change font
+</pre>
 
 </html>
